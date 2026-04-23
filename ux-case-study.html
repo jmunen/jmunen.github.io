@@ -1,1 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koality Health | UX Case Study</title>
+  <style>
+    :root {
+      --text: #1f1f1f;
+      --muted: #666;
+      --line: #e5e5e5;
+      --soft: #f7f7f7;
+      --accent: #0d4f54;
+      --max: 980px;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 40px 20px 90px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      max-width: 850px;
+    }
+
+    .intro {
+      font-size: 1.15rem;
+      color: #444;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    .hero-image,
+    .section-image {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid #ddd;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .caption {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      background: var(--soft);
+      padding: 20px;
+      border-radius: 14px;
+      margin: 30px 0 40px;
+    }
+
+    .meta-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    section {
+      margin-top: 62px;
+    }
+
+    h2 {
+      font-size: 1.85rem;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 30px;
+      margin-bottom: 8px;
+    }
+
+    .summary-box {
+      background: #fafafa;
+      border-left: 4px solid var(--text);
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    .process-list,
+    .highlight-box {
+      background: var(--soft);
+      padding: 20px 24px;
+      border-radius: 14px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 14px 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .results-list li {
+      font-weight: 600;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 8px;
+    }
+
+    .footer-link {
+      margin-top: 60px;
+      font-size: 1rem;
+    }
+
+    .footer-link a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 760px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <div class="eyebrow">UX Case Study</div>
+    <h1>Designing a more trustworthy way to find culturally competent healthcare providers</h1>
+    <p class="intro">
+      Koality Health is a healthcare discovery platform designed to help people of color,
+      LGBTQIA+ individuals, and women find providers who better understand their identities,
+      needs, and lived experiences.
+    </p>
+
+    <img class="hero-image" src="hero-koality.png" alt="Koality Health final prototype overview" />
+    <p class="caption">Final high-fidelity concept for Koality Health</p>
+
+    <div class="meta-grid">
+      <div class="meta-item">
+        <strong>Project</strong>
+        Koality Health
+      </div>
+      <div class="meta-item">
+        <strong>Role</strong>
+        UX Designer, Researcher, Prototype Contributor
+      </div>
+      <div class="meta-item">
+        <strong>Team</strong>
+        Jackline Munene, Jordan Lesaca, Nihal Sandadi
+      </div>
+      <div class="meta-item">
+        <strong>Timeline</strong>
+        Semester-long UX project
+      </div>
+      <div class="meta-item">
+        <strong>Methods</strong>
+        Interviews, ideation, paper prototyping, heuristic evaluation, usability testing
+      </div>
+      <div class="meta-item">
+        <strong>Core Features</strong>
+        Search & filtering, reviews, appointment scheduling
+      </div>
+    </div>
+
+    <section>
+      <h2>Summary</h2>
+      <div class="summary-box">
+        The goal of this project was to make healthcare provider search feel more personal,
+        trustworthy, and usable for people who are often underserved by traditional healthcare
+        systems. Our work focused on three areas: helping users search by identity and fit,
+        making reviews more useful and transparent, and simplifying the path from finding a
+        provider to booking an appointment.
+      </div>
+    </section>
+
+    <section>
+      <h2>About the project</h2>
+      <p>
+        Koality Health began as a response to a real healthcare access problem: women of color,
+        LGBTQ+ people of color, and LGBTQ+ individuals more broadly continue to face bias,
+        dismissal, stigma, and difficulty finding equitable and culturally competent care.
+        Existing tools often force users to piece together information across insurance
+        directories, search engines, and third-party review platforms before they can feel
+        confident choosing a provider.
+      </p>
+    </section>
+
+    <section>
+      <h2>The problem</h2>
+      <div class="highlight-box">
+        <ul>
+          <li>Patients from marginalized communities struggle to find providers who understand their identity and background.</li>
+          <li>Bias and dismissive past experiences reduce trust in healthcare systems.</li>
+          <li>Users often have to search across multiple tools to compare reviews, insurance compatibility, availability, and provider fit.</li>
+          <li>Finding the right provider can feel time-consuming, fragmented, and emotionally draining.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Objective</h2>
+      <p>
+        We wanted to design a platform that would help users search for providers more
+        efficiently, evaluate fit with more confidence, and move into scheduling with less
+        friction. The product needed to support both trust and convenience: users wanted
+        identity-aware filtering and meaningful reviews, but they also cared about availability,
+        location, language, and insurance compatibility.
+      </p>
+    </section>
+
+    <section>
+      <h2>Process</h2>
+      <div class="process-list">
+        <ul>
+          <li>Defined the problem space and target communities</li>
+          <li>Conducted interviews to understand how people currently find care</li>
+          <li>Synthesized findings into themes, personas, and task requirements</li>
+          <li>Sketched concepts around provider search, reviews, and appointment management</li>
+          <li>Built paper and medium-fidelity prototypes</li>
+          <li>Used heuristic evaluation and user feedback to refine the interface</li>
+          <li>Created a high-fidelity prototype showing the final end-to-end flow</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research</h2>
+      <p>
+        Because of the semester timeline, interviews were our primary research method. The team
+        conducted six interviews across in-person, online, and contextual formats. Participants
+        described how they searched for providers, what criteria mattered most, and what slowed
+        them down or reduced trust in the process.
+      </p>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>What users told us</h3>
+          <ul>
+            <li>Identity matters. Users wanted providers who understood their cultural background or lived experience.</li>
+            <li>Trust is everything. Reviews, word of mouth, and prior experiences strongly shaped decisions.</li>
+            <li>Convenience still matters. Distance, availability, insurance, and filtering options remained critical.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What we learned</h3>
+          <ul>
+            <li>Users were frustrated by needing to jump between insurance directories, Google, and review sites.</li>
+            <li>Searches felt better when strong filters were available early.</li>
+            <li>Reviews were more valuable when they felt specific, community-informed, and tied to provider fit.</li>
+          </ul>
+        </div>
+      </div>
+
+      <img class="section-image" src="research-findings.png" alt="Research findings and team synthesis" />
+      <p class="caption">Research synthesis and key user insights</p>
+    </section>
+
+    <section>
+      <h2>Key design opportunities</h2>
+      <p>
+        After research, three core opportunities emerged. These became the backbone of the
+        product and guided the rest of our design work.
+      </p>
+      <ul>
+        <li>Create a better provider search experience with identity-aware filters.</li>
+        <li>Build a review system that helps users judge fit, not just star ratings.</li>
+        <li>Make appointment scheduling and management feel simpler and more direct.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ideation</h2>
+      <p>
+        During ideation, we translated research themes into concrete workflows. Our group focused
+        on filtering providers, viewing/adding reviews, and managing appointments. We explored
+        features such as search by specialty and identity, provider tags, better review visibility,
+        edit/delete review flows, and appointment dashboards with reschedule and cancel actions.
+      </p>
+
+      <img class="section-image" src="early-sketches.png" alt="Early paper sketches" />
+      <p class="caption">Early sketches exploring provider search, review flows, and appointment management</p>
+    </section>
+
+    <section>
+      <h2>Early prototype</h2>
+      <p>
+        The first paper prototype centered on provider search and scheduling. Users could search
+        by specialty, apply filters, view provider summaries, and begin booking an appointment.
+        These early flows helped us test what information needed to be surfaced sooner, especially
+        provider details, reviews, and scheduling controls.
+      </p>
+
+      <img class="section-image" src="paper-prototype.png" alt="Paper prototype screens" />
+      <p class="caption">Paper prototype for provider search and scheduling</p>
+    </section>
+
+    <section>
+      <h2>Testing and evaluation</h2>
+      <p>
+        As the prototype became more detailed, we evaluated it through user feedback and
+        heuristic analysis. This made the next round of changes much more specific.
+      </p>
+
+      <div class="two-col">
+        <div class="card">
+          <h3>User feedback</h3>
+          <ul>
+            <li>The homepage felt too empty and did not clearly suggest what to do next.</li>
+            <li>Scheduling was confusing, especially when users had to choose date and time separately.</li>
+            <li>Review creation and editing needed a clearer interaction flow.</li>
+            <li>Users wanted confirmation after booking and an easier way to add appointments to their calendars.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Heuristic issues</h3>
+          <ul>
+            <li>Weak visibility of system status after booking</li>
+            <li>Too much recall and not enough visible choices in scheduling</li>
+            <li>Inconsistent or unclear terminology and navigation cues</li>
+            <li>Missing error prevention and confirmation for destructive actions</li>
+          </ul>
+        </div>
+      </div>
+
+      <img class="section-image" src="evaluation-iteration.png" alt="Medium fidelity iteration and evaluation changes" />
+      <p class="caption">Evaluation findings guided changes to the scheduling flow, homepage, and review interactions</p>
+    </section>
+
+    <section>
+      <h2>How the design evolved</h2>
+
+      <h3>1. Search became more informative</h3>
+      <p>
+        Early search results did not surface enough information up front. Later iterations added
+        clearer provider cards, more visible addresses, labels under navigation icons, and better
+        filter behavior so users could understand options without extra clicks.
+      </p>
+
+      <img class="section-image" src="search-iteration.png" alt="Search iteration comparison" />
+      <p class="caption">Search results evolved to surface more useful information earlier</p>
+
+      <h3>2. Scheduling became simpler</h3>
+      <p>
+        One major change was combining date and time selection into one screen instead of making
+        users jump across multiple steps. Clickable options replaced more ambiguous inputs, and
+        the final flow added clearer confirmation feedback.
+      </p>
+
+      <img class="section-image" src="scheduling-iteration.png" alt="Scheduling flow iteration" />
+      <p class="caption">Scheduling evolved from a more fragmented flow into a clearer step-by-step experience</p>
+
+      <h3>3. Reviews became part of trust-building</h3>
+      <p>
+        Reviews shifted from feeling like an add-on to becoming a central decision-making tool.
+        Later iterations improved the visibility of ratings, tags, editing actions, and review
+        submission states so users could better judge provider fit and contribute their own
+        experiences.
+      </p>
+
+      <img class="section-image" src="review-flow.png" alt="Review flow screens" />
+      <p class="caption">Review pages, edit states, and add-review interactions became more explicit in later iterations</p>
+    </section>
+
+    <section>
+      <h2>The final solution</h2>
+      <p>
+        The final high-fidelity prototype presents Koality Health as a platform where users can:
+      </p>
+      <ul>
+        <li>Search by identity, location, specialty, insurance, and other fit-related criteria</li>
+        <li>Review providers using both ratings and more descriptive tags</li>
+        <li>View provider details before committing to a visit</li>
+        <li>Book appointments with clearer confirmation and calendar support</li>
+        <li>Manage upcoming visits more efficiently from a more useful home experience</li>
+      </ul>
+
+      <img class="section-image" src="final-prototype.png" alt="Final prototype screens" />
+      <p class="caption">Final high-fidelity screens for search, profile, appointments, and reviews</p>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <ul class="results-list">
+        <li>The concept moved from a broad idea into a more coherent end-to-end healthcare discovery flow.</li>
+        <li>Provider search, reviews, and scheduling became the three strongest pillars of the product.</li>
+        <li>User feedback directly shaped major design decisions in later iterations.</li>
+        <li>The final prototype better balanced trust, clarity, and convenience than the early concepts.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Challenges and learnings</h2>
+      <p>
+        One of the biggest lessons from this project was that culturally competent healthcare
+        search is not just a filtering problem. It is also a trust problem. Users needed help
+        understanding whether a provider would feel safe, respectful, and informed before they
+        ever reached the scheduling step.
+      </p>
+      <p>
+        I also learned that healthcare UX benefits from reducing fragmentation. Small changes,
+        like showing more provider information sooner, making scheduling controls clearer, and
+        adding visible confirmation states, had a big effect on how understandable the product
+        felt.
+      </p>
+    </section>
+
+    <section>
+      <h2>Next steps</h2>
+      <p>
+        If I continued this project, I would test the product with a broader range of users,
+        especially participants with different insurance situations and different levels of
+        digital comfort. I would also further develop verified review signals, provider
+        compatibility indicators, and stronger integration between search, provider profiles,
+        and booking.
+      </p>
+    </section>
+
+    <p class="footer-link">
+      <a href="index.html">← Back to portfolio home</a>
+    </p>
+
+  </main>
+</body>
+</html>
